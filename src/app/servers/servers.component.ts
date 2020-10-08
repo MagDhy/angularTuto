@@ -15,8 +15,9 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = 'testServer';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver2'];
 
-  userName = '';
+  
 
   constructor() {
     setTimeout(() => {
@@ -30,17 +31,12 @@ export class ServersComponent implements OnInit {
   onCreateServer(){
     this.serverCreated = true; //the p is not in the dom then appear with ngIf on true
     //this.serverCreationStatus = "Server was created! Name is " + this.serverName;
+    this.servers.push(this.serverName);
   }
   //onUpdateServerName(event : Event){
   //  this.serverName = (<HTMLInputElement>event.target).value;
   //}
   
-  onResetUserName(){
-
-    this.userName = '';
-  }
-  onUpdateUserName(event : Event){
-    this.userName = (<HTMLInputElement>event.target).value;
-  }
+  
 
 }

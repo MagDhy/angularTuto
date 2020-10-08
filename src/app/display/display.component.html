@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-danger" (click)="onDisplay()">Display Details</button>
+        <p [ngStyle]="{display: getDisplay()}" >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum minima, sit, quidem, alias veniam soluta commodi natus nemo officia odit id nesciunt. A voluptates mollitia repellat, animi neque omnis deserunt?
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div [ngClass]="{'counted': count >= 5}" *ngFor="let count of counts">{{ count }}</div>
+    </div>
+</div>
+<!--[ngClass]="{'counted': count >= 5}"-->
+<!--if use timespan get the index of the tab elmt
+    <div [ngClass]="{'counted': i >= 4}" *ngFor="let count of counts; let i = index">{{ count }}</div>
+-->
+
+
